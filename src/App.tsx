@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <GameGrid></GameGrid>
+      <GameGrid></GameGrid>;
     </>
   );
 }
