@@ -4,12 +4,15 @@ import { px } from "framer-motion"
 import ToggleColorMode from "./ToggleColorMode"
 import SearchInput from "./SearchInput"
 
+interface Props {
+  onSearch: (searchText: string) => void
+}
 
-const NavBar = () => {
+const NavBar = ({onSearch}: Props) => {
   return (
     <HStack justifyContent='space-between' padding='10px'>
         <Image src={logo} boxSize="60px"></Image>
-        <SearchInput/>
+        <SearchInput onSearch={onSearch}/>
         <ToggleColorMode/>
     </HStack>
   )
